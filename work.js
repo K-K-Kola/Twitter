@@ -1,20 +1,13 @@
-function createSideMenuButton(name){
-   let div =  document.createElement('div');
-   let span =  document.createElement('span');
+function displayDetails() {
 
-    div.insertBefore(span,div.firstChild);
-    span.innerHTML = name;
-    div.setAttribute('class','button');
-    div.setAttribute('id',name);
-    div.setAttribute('onclick','changeColor()');
+    let form = document.getElementById('form');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+    });
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    console.log("Name: " + name + " Email: " + email);
 }
-
-createSideMenuButton('Home');
-createSideMenuButton('Subscriptions');
-
-
-
-
-
-
 
